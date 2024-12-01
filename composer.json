@@ -1,8 +1,12 @@
 {
     "autoload": {
         "psr-4": {
-            "app\\":"app",
+            "app\\": "app",
             "core\\": "core"
         }
+    },
+    "require": {
+        "twig/twig": "^3.16",
+        "symfony/twig-bundle": "^7.2"
     }
 }
