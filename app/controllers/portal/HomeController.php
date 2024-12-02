@@ -3,7 +3,7 @@
 
     class HomeController {
         public function index() {
-            
+            diedump('index');
         }
     }
 ?>

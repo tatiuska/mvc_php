@@ -34,8 +34,24 @@
             return $this->instantiateController();
         }
 
+        # método para instanciar o controller
         private function controllerNotHome() {
+            $controller = $this->getControllerNotHome();
 
+            if(!$this->controllerExist($controller)) {
+                throw new ControllerNotExistException("Esse controller não existe!");
+            }
+
+            return $this->instantiateController();
+        }
+
+        private function getControllerNotHome() {
+            if(substr_count($this->uri, '/') > 1) {
+                list($controller) = array_values(array_filter(explode('/', $this->uri)));
+                return ucfirst($controller) . 'Controller';
+            }
+
+            return ucfirst(ltrim($this->uri, '/')) . 'Controller';
         }
 
         #verifica se está na página inicial
