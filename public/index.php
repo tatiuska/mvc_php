@@ -19,16 +19,10 @@
 
         $controller->$method($parameters);
 
-        diedump($controller);
+        // diedump($controller);
 
     } catch(\Exception $e) {
         diedump($e->getMessage());
     }
-
-
-    // $parameters = new Parameters;
-    // $parameters = $parameters->getParameters();
-
-    // $controller->$method($parameters);
 
 ?>

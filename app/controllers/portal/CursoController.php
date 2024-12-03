@@ -1,13 +1,18 @@
 <?php 
     namespace app\controllers\portal;
 
-    class CursoController {
+    use app\controllers\ContainerController;
+
+    class CursoController extends ContainerController {
         public function index() {
 
         }
 
         public function show($request) {
-            diedump($request->parameter);
+            $this->view([
+                'title' => 'Curso',
+                'curso' => 'PHP MVC',
+            ], 'portal.curso');
 
         }
 
