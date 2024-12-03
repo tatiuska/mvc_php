@@ -11,7 +11,7 @@
         public function show($request) {
             $this->view([
                 'title' => 'Curso',
-                'curso' => 'PHP MVC',
+                'curso' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima, quos inventore! Adipisci nam veritatis ipsum iure perferendis consequuntur impedit placeat. Reiciendis, aut. Unde, libero dolore? Perferendis necessitatibus rem odit quo.',
             ], 'portal.curso');
 
         }

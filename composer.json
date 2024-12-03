@@ -7,6 +7,8 @@
     },
     "require": {
         "twig/twig": "^3.16",
-        "symfony/twig-bundle": "^7.2"
+        "symfony/twig-bundle": "^7.2",
+        "dzango/twig-truncate-extension": "^1.1",
+        "dzango/twig-truncate-bundle": "^1.0"
     }
 }
