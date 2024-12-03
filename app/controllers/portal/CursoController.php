@@ -6,7 +6,8 @@
 
         }
 
-        public function show() {
+        public function show($request) {
+            diedump($request->parameter);
 
         }
 

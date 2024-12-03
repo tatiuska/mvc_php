@@ -3,6 +3,7 @@
 
     use core\Controller;
     use core\Method;
+    use core\Parameters;
 
     // diedump(app\classes\Uri::uri());
 
@@ -13,7 +14,10 @@
         $method = new Method;
         $method = $method->load($controller);
 
-        $controller->$method();
+        $parameters = new Parameters;
+        $parameters = $parameters->load();
+
+        $controller->$method($parameters);
 
         diedump($controller);
 
